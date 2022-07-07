@@ -10,10 +10,11 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "rollup -c rollup.config.js"
+    "build": "npm version patch && rollup -c rollup.config.js && npm publish"
   },
   "dependencies": {
     "@rollup/plugin-node-resolve": "^13.3.0",
+    "apipost-tools": "0.0.9",
     "core-js": "^3.9.0",
     "httpsnippet": "^2.0.0",
     "rollup": "^2.74.1",
@@ -67,5 +68,15 @@
   },
   "author": "xbw",
   "license": "MIT",
-  "keywords": ["har","har2languages","harto","hartojava","hartophp","hartojs","hartogo","hartocsharp","hartopython"]
+  "keywords": [
+    "har",
+    "har2languages",
+    "harto",
+    "hartojava",
+    "hartophp",
+    "hartojs",
+    "hartogo",
+    "hartocsharp",
+    "hartopython"
+  ]
 }
