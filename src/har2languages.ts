@@ -24,8 +24,11 @@ class har2languages {
             swift: ['nsurlsession']
         }
     }
-    convert(har: Object, language: String, type: String = '') {
+    convert(har: any, language: String, type: String = '') {
         try {
+            if(har.hasOwnProperty('url')){
+                har.url = har.url.replace(/ /g, "%20");
+            }
             const snippet = new HTTPSnippet(har);
             const result = snippet.convert(language, type);
             return Atools.successResult(result)
